@@ -39,6 +39,14 @@ const regenjassen = document.querySelector("#regenjass")
 const fancypak = document.querySelector("#nettepak")
 const blauweoutfit = document.querySelector("#blauwejurken")
 
+/*kettingen*/
+const sterhanger = document.querySelector("#sterhangers");
+const sjaal = document.querySelector("#francesjaal");
+const parels = document.querySelector("#parelketting");
+const strik = document.querySelector("#fancystrik");
+
+
+
 
 
 
@@ -55,6 +63,13 @@ let brilstatus = true
 /*clothes*/
 let kledingVeranderen = document.querySelector("#leegkleding")
 let kledingstatus = true
+
+/*kettingen*/
+let kettingVeranderen = document.querySelector("#leegketting")
+let kettingstatus = true
+
+
+
 
 
 /*hoofdeksels*/
@@ -172,6 +187,46 @@ function blauweoutfitknop() {
     } 
 }
 
+/*kettingen*/
+function sterkettingknop() {
+    if (kettingstatus == true) {
+        kettingVeranderen.src = "plaatjes/ampthyketting.png";
+        kettingstatus = false;
+    } else {
+        kettingVeranderen.src = "plaatjes/sterket.png";
+        kstatus = true; 
+    } 
+}
+function sjaalknop() {
+    if (kettingstatus == true) {
+        kettingVeranderen.src = "plaatjes/ampthyketting.png";
+        kettingstatus = false;
+    } else {
+        kettingVeranderen.src = "plaatjes/rozesjaal.png";
+        kstatus = true; 
+    } 
+}
+function parelsknop() {
+    if (kettingstatus == true) {
+        kettingVeranderen.src = "plaatjes/ampthyketting.png";
+        kettingstatus = false;
+    } else {
+        kettingVeranderen.src = "plaatjes/parelketting.png";
+        kstatus = true; 
+    } 
+}
+function strikknop() {
+    if (kettingstatus == true) {
+        kettingVeranderen.src = "plaatjes/ampthyketting.png";
+        kettingstatus = false;
+    } else {
+        kettingVeranderen.src = "plaatjes/fancystrik.png";
+        kstatus = true; 
+    } 
+}
+
+
+
 
 
 
@@ -193,6 +248,14 @@ rozejurk.addEventListener('click',rozejurkknop);
 regenjassen.addEventListener('click',regenjasknop);
 fancypak.addEventListener('click',nettejasknop);
 blauweoutfit.addEventListener('click',blauweoutfitknop);
+
+/*kettingen*/
+sterhanger.addEventListener('click',sterkettingknop);
+sjaal.addEventListener('click',sjaalknop);
+parels.addEventListener('click',parelsknop);
+strik.addEventListener('click',strikknop);
+
+
 
 
 
