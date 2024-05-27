@@ -45,6 +45,10 @@ const sjaal = document.querySelector("#francesjaal");
 const parels = document.querySelector("#parelketting");
 const strik = document.querySelector("#fancystrik");
 
+/*dobbelsteen*/
+const dobbelsteen = document.querySelector("#dobbeljava");
+
+
 
 
 
@@ -67,6 +71,12 @@ let kledingstatus = true
 /*kettingen*/
 let kettingVeranderen = document.querySelector("#leegketting")
 let kettingstatus = true
+
+/*dobbelsteen*/
+let dobbelsteenVeranderen = document.querySelector("#dobbelsteenkat")
+let randomstate = true
+let lijstkleding = ['plaatjes/outfit1.png','plaatjes/outfit2.png', 'plaatjes/outfit3.png', 'plaatjes/outfit4.png']
+
 
 
 
@@ -194,7 +204,7 @@ function sterkettingknop() {
         kettingstatus = false;
     } else {
         kettingVeranderen.src = "plaatjes/sterket.png";
-        kstatus = true; 
+        kettingstatus = true; 
     } 
 }
 function sjaalknop() {
@@ -203,7 +213,7 @@ function sjaalknop() {
         kettingstatus = false;
     } else {
         kettingVeranderen.src = "plaatjes/rozesjaal.png";
-        kstatus = true; 
+        kettingstatus = true; 
     } 
 }
 function parelsknop() {
@@ -212,8 +222,9 @@ function parelsknop() {
         kettingstatus = false;
     } else {
         kettingVeranderen.src = "plaatjes/parelketting.png";
-        kstatus = true; 
+        kettingstatus = true; 
     } 
+    resetRandomOutfit();
 }
 function strikknop() {
     if (kettingstatus == true) {
@@ -221,8 +232,16 @@ function strikknop() {
         kettingstatus = false;
     } else {
         kettingVeranderen.src = "plaatjes/fancystrik.png";
-        kstatus = true; 
+        kettingstatus = true; 
     } 
+}
+/*dobbelsteen*/
+
+function veranderOutfit() {
+    if (randomstate) {
+        const randomIndex = Math.floor(Math.random() * lijstkleding.length);
+        dobbelsteenVeranderen.src = lijstkleding[randomIndex];
+    }
 }
 
 
@@ -255,6 +274,8 @@ sjaal.addEventListener('click',sjaalknop);
 parels.addEventListener('click',parelsknop);
 strik.addEventListener('click',strikknop);
 
+/*dobbelsteen*/
+dobbelsteen.addEventListener("click", veranderOutfit);
 
 
 
