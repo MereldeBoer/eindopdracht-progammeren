@@ -1,103 +1,66 @@
-console.log("haloooo");
-/*const h1Element = document.querySelector("h1");
-h1Element.textContent = "CATwalk";
 
-const pElement = document.querySelector ("p")
-/*pElement.textContent = "Mieauwww"*/
+/*hoofdeksels: de knoppen waar je op druk om de hoeden te veranderen*/
 
-/*const button = document.querySelector("button")
-
-function aankleden (kledingstuk){
-    console.log("draagt een" + kledingstuk)
-    pElement.textContent = "miauwwww"
-}
-/* aankleden(" rokje");
-aankleden(" hoed") 
-
-button.addEventListener('click',aankleden)
-console.log("halooo");
-
-/ Verwijzingen naar het h1 element en het audio element
-var header = document.getElementById('myHeader');
-var audio = document.getElementById('myAudio');
-
-// Functie om de tekst te veranderen en het audiobestand af te spelen
-function changeTextAndPlayMusic() {
-    header.textContent = 'Nieuwe Tekst';
-    audio.play();
-}
-
-// Stel de interval in om de functie na 30 seconden uit te voeren
-setTimeout(changeTextAndPlayMusic, 30000); // 30000 milliseconden = 30 seconden
-
-*/
-
-console.log("halooo");
-
-/*hoofdeksels*/
-const bloemkroon = document.querySelector("#bloemhoed");
+const bloemenkrans= document.querySelector("#bloemhoed");
 const heksenhoed= document.querySelector(".heksenhoed");
 const baretthoed= document.querySelector("#barrethoed");
 const fancyhoed= document.querySelector("#fancyhoed")
 
-/*brillen*/
+/*brillen: de knoppen waar je op druk om te brillen te veranderen*/
 const sterrenbril = document.querySelector("#sterretjesbril");
 const rondebrill = document.querySelector("#rondebrilletjes");
 const zonnebril = document.querySelector("#zonnebrillen");
 const rozebril = document.querySelector("#fancyrozebril");
 
-/*clothes*/
+/*clothes: de knoppen waar je op druk om te kleding te veranderene*/
 const rozejurk = document.querySelector("#jurkroze");
 const regenjassen = document.querySelector("#regenjass")
 const fancypak = document.querySelector("#nettepak")
 const blauweoutfit = document.querySelector("#blauwejurken")
 
-/*kettingen*/
+/*kettingen: de knoppen waar je op druk om de accessoires te veranderen*/
 const sterhanger = document.querySelector("#sterhangers");
 const sjaal = document.querySelector("#francesjaal");
 const parels = document.querySelector("#parelketting");
 const strik = document.querySelector("#fancystrik");
 
-/*dobbelsteen*/
+/*dobbelsteen: de dobbelsteen knop om de kat random outfits te geven*/
 const dobbelsteen = document.querySelector("#dobbeljava");
 
+/*audio: koppelen van muziek met java script
+bron: https://www.youtube.com/watch?v=cDxzpUCvBGI 
+onderzoek bron: https://stackoverflow.com/questions/9419263/how-to-play-audio*/
+
+const audio = document.getElementById('myAudio');
 
 
 
 
-
-
-
-
-
-
-
-/*hoofdeksels*/
+/*hoofdeksels: plaatje van de hoed die later wordt veranderd naar een andere hoed*/
 let hoedVeranderen = document.querySelector("#leeghoed");
 let hoedstatus = true;
 
-/*brillen*/
+/*brillen: plaatje van de bril die later veranderd naar een andere bril*/
 let brilVeranderen = document.querySelector("#leegbril")
 let brilstatus = true
 
-/*clothes*/
+/*clothes: plaatje van kleding die later veranderd naar een andere plaatje van kleding*/
 let kledingVeranderen = document.querySelector("#leegkleding")
 let kledingstatus = true
 
-/*kettingen*/
+/*kettingen: plaatje van ketting die later veranderd naar een andere plaatje van een ketting*/
 let kettingVeranderen = document.querySelector("#leegketting")
 let kettingstatus = true
 
-/*dobbelsteen*/
+/*dobbelsteen: plaatje die je met behulp van de dobbelsteen random veranderd - en array van de lijst met welke kleding de kat willekeurig in kan verandren*/
 let dobbelsteenVeranderen = document.querySelector("#dobbelsteenkat")
 let randomstate = true
 let lijstkleding = ['plaatjes/outfit1.png','plaatjes/outfit2.png', 'plaatjes/outfit3.png', 'plaatjes/outfit4.png']
+let willekeurigeIndex;
 
 
-/*audio*/
-let audio = document.getElementById('myAudio');
-audio.play()
 
+/*de h1 tekst die ik wil veranderen na aantal secondes*/
 let h1tekst = document.querySelector("#h1E");
 
 
@@ -105,8 +68,8 @@ let h1tekst = document.querySelector("#h1E");
 
 
 
-/*hoofdeksels*/
-function bloemknop() {
+/*hoofdeksels: function om er voor te zorgen dat wanneer je op een afbeelding klikt een plaatje veranderd naar een ander plaatje*/
+function bloemenknop() {
     if (hoedstatus == true) {
         hoedVeranderen.src = "plaatjes/empthyhad.png";
         hoedstatus = false;
@@ -115,6 +78,9 @@ function bloemknop() {
         hoedstatus = true; 
     } 
 }
+
+
+
 function heksenhoedknop() {
     if (hoedstatus == true) {
         hoedVeranderen.src = "plaatjes/empthyhad.png";
@@ -144,7 +110,7 @@ function fancyhoedknop() {
     } 
 }
 
-/*brillen*/
+/*brillen: function om er voor te zorgen dat wanneer je op een afbeelding klikt een plaatje veranderd naar een ander plaatje*/
 
 function sterrenbrilknop() {
     if (brilstatus == true) {
@@ -182,7 +148,7 @@ function rozebrilknop() {
         brilstatus = true; 
     } 
 }
-/*clothes*/
+/*clothes: function om er voor te zorgen dat wanneer je op een afbeelding klikt een plaatje veranderd naar een ander plaatje*/
 function rozejurkknop() {
     if (kledingstatus == true) {
         kledingVeranderen.src = "plaatjes/empthyclothes.png";
@@ -220,7 +186,7 @@ function blauweoutfitknop() {
     } 
 }
 
-/*kettingen*/
+/*kettingen: function om er voor te zorgen dat wanneer je op een afbeelding klikt een plaatje veranderd naar een ander plaatje*/
 function sterkettingknop() {
     if (kettingstatus == true) {
         kettingVeranderen.src = "plaatjes/ampthyketting.png";
@@ -258,16 +224,16 @@ function strikknop() {
         kettingstatus = true; 
     } 
 }
-/*dobbelsteen*/
+/*dobbelsteen: functie om er voor te zorgen dat wanneer je om de plaatje van de dobbelsteen klikt de kat op een random volgorde kleding aandoet*/
 
+/*om de plaatjes random te veranderen heb ik research gedaan op internet en heeft chatgpt me geholpen met het te begrijpen*/
 function veranderOutfit() {
     if (randomstate) {
-        const randomIndex = Math.floor(Math.random() * lijstkleding.length);
-        dobbelsteenVeranderen.src = lijstkleding[randomIndex];
+        willekeurigeIndex = Math.floor(Math.random() * lijstkleding.length);
+        dobbelsteenVeranderen.src = lijstkleding[willekeurigeIndex];
     }
- 
 }
-/*audio*/
+/*audio: functie om er voor te zorgen dat er na zoveel secondes een muziekje afspeelt en de tekst catwalk veranderd naar dance break*/
 
 function dancebreak() {
     h1tekst.textContent = "Dancebreak";
@@ -275,49 +241,39 @@ function dancebreak() {
 
 }
 
-
-
 setTimeout(dancebreak, 60000); 
 
 
 
 
-
-
-
-
-
-
-
-/*hoofdeksels*/
-bloemkroon.addEventListener('click', bloemknop);
+/*hoofdeksels: roept functie aan om plaatje te veranderen wannneer je ergens op klikt*/
+bloemenkrans.addEventListener('click', bloemenknop);
 heksenhoed.addEventListener('click', heksenhoedknop);
 baretthoed.addEventListener('click', barretknop);
 fancyhoed.addEventListener('click', fancyhoedknop);
 
-/*brillen*/
+/*brillen: roept functie aan om plaatje te veranderen wannneer je ergens op klikt*/
 sterrenbril.addEventListener('click', sterrenbrilknop);
 rondebrill.addEventListener('click', rondebrilknop);
 zonnebril.addEventListener('click',zonnebrillknop)
 rozebril.addEventListener('click',rozebrilknop);
 
-/*clothes*/
+/*clothes: roept functie aan om plaatje te veranderen wannneer je ergens op klikt*/
 rozejurk.addEventListener('click',rozejurkknop);
 regenjassen.addEventListener('click',regenjasknop);
 fancypak.addEventListener('click',nettejasknop);
 blauweoutfit.addEventListener('click',blauweoutfitknop);
 
-/*kettingen*/
+/*kettingen: roept functie aan om plaatje te veranderen wannneer je ergens op klikt*/
 sterhanger.addEventListener('click',sterkettingknop);
 sjaal.addEventListener('click',sjaalknop);
 parels.addEventListener('click',parelsknop);
 strik.addEventListener('click',strikknop);
 
-/*dobbelsteen*/
+/*dobbelsteen: roept functie aan om plaatje te veranderen wannneer je ergens op klikt*/
 dobbelsteen.addEventListener("click", veranderOutfit);
 
-/*audio*/
-let
+
 
 
 
