@@ -19,7 +19,13 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    
 }
+.header{
+    margin-top: 200px;
+    margin-right: 170px;
+}
+
 .beginpagina{
     display: flex;
     justify-content: center;
@@ -45,6 +51,7 @@ body{
     margin-right: 180px;
 
 }
+
 
 .katkleding{
     position: absolute;

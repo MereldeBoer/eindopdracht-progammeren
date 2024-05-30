@@ -17,6 +17,19 @@ aankleden(" hoed")
 button.addEventListener('click',aankleden)
 console.log("halooo");
 
+/ Verwijzingen naar het h1 element en het audio element
+var header = document.getElementById('myHeader');
+var audio = document.getElementById('myAudio');
+
+// Functie om de tekst te veranderen en het audiobestand af te spelen
+function changeTextAndPlayMusic() {
+    header.textContent = 'Nieuwe Tekst';
+    audio.play();
+}
+
+// Stel de interval in om de functie na 30 seconden uit te voeren
+setTimeout(changeTextAndPlayMusic, 30000); // 30000 milliseconden = 30 seconden
+
 */
 
 console.log("halooo");
@@ -56,6 +69,9 @@ const dobbelsteen = document.querySelector("#dobbeljava");
 
 
 
+
+
+
 /*hoofdeksels*/
 let hoedVeranderen = document.querySelector("#leeghoed");
 let hoedstatus = true;
@@ -76,6 +92,13 @@ let kettingstatus = true
 let dobbelsteenVeranderen = document.querySelector("#dobbelsteenkat")
 let randomstate = true
 let lijstkleding = ['plaatjes/outfit1.png','plaatjes/outfit2.png', 'plaatjes/outfit3.png', 'plaatjes/outfit4.png']
+
+
+/*audio*/
+let audio = document.getElementById('myAudio');
+audio.play()
+
+let h1tekst = document.querySelector("#h1E");
 
 
 
@@ -224,7 +247,7 @@ function parelsknop() {
         kettingVeranderen.src = "plaatjes/parelketting.png";
         kettingstatus = true; 
     } 
-    resetRandomOutfit();
+
 }
 function strikknop() {
     if (kettingstatus == true) {
@@ -242,7 +265,23 @@ function veranderOutfit() {
         const randomIndex = Math.floor(Math.random() * lijstkleding.length);
         dobbelsteenVeranderen.src = lijstkleding[randomIndex];
     }
+ 
 }
+/*audio*/
+
+function dancebreak() {
+    h1tekst.textContent = "Dancebreak";
+    audio.play();
+
+}
+
+
+
+setTimeout(dancebreak, 60000); 
+
+
+
+
 
 
 
@@ -277,7 +316,8 @@ strik.addEventListener('click',strikknop);
 /*dobbelsteen*/
 dobbelsteen.addEventListener("click", veranderOutfit);
 
-
+/*audio*/
+let
 
 
 
