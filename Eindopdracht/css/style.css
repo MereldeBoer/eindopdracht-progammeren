@@ -1,0 +1,179 @@
+body{
+    background-image: url(../plaatjes/catwalk.jpg);
+    /* bron: https://www.vecteezy.com/vector-art/2804430-pink-runway-platform-flat-color-vector-illustration-empty-podium-stage-catwalk-with-spotlights-fashion-week-demonstration-area-presentation-of-new-collection-fashion-shows-background */
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    
+}
+
+.main2{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+/*beginpagina*/
+.tekst{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.header{
+    margin-top: 200px;
+    margin-right: 170px;
+}
+
+.beginpagina{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+}
+.katwit{
+    position: absolute;
+    top: 350px;
+    width: 200px;
+}
+
+
+
+/*aankleden pagina*/
+.aankleden{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 180px;
+
+}
+
+
+.katkleding{
+    position: absolute;
+    top: 350px;
+    width: 200px;
+   
+    
+    
+
+
+}
+.bloem{
+    z-index: 2;
+    position: absolute;
+    top: 350px;
+    width: 200px;
+}
+.dobbelsteen{
+    top: 350px;
+    width: 200px;
+
+}
+/*hoofdeksels*/
+
+.hoofddeksels{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+  
+
+}
+.hoed{
+    width: 150px;
+}
+
+#bloemhoed{
+    width: 150px;
+}
+
+.heksenhoed{
+    width: 150px;
+
+}
+.barret{
+    width: 150px;
+}
+.fancy{
+    width: 150px;
+}
+
+
+
+/*Brillen*/
+.brilrond{
+    width: 150px ;
+}
+.brillen{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column; 
+    text-align:center;  
+    margin-left: 30px;
+}
+.bril{
+    width: 150px ;
+}
+.brilrond{
+    width: 150px ;
+}
+.links{
+    display: flex;
+    justify-content: flex-start;
+}
+
+/*kleding*/
+.kledingstukken{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column; 
+    text-align:center;  
+}
+.kleding{
+    width: 150px;
+}
+#jurkroze{
+    width: 150px;
+}
+.rechts{
+    display: flex;
+    justify-content: flex-end;
+    
+
+}
+/*assocaris*/
+.ass{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column; 
+    text-align:center;  
+    
+
+}
+.ketting{
+   width: 150px;
+
+}
+
+/*zindex*/
+
+
+
+
+
+
+
+
+
+
+
+
+
