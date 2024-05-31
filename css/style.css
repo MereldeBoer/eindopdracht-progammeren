@@ -6,7 +6,10 @@ body{
 
     
 }
-
+a{
+    background-color: white;
+    padding: 4px;
+}
 .main2{
     display: flex;
     justify-content: space-between;
