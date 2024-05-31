@@ -1,5 +1,5 @@
 
-/*hoofdeksels: de knoppen waar je op druk om de hoeden te veranderen*/
+/*hoofdeksels: de knoppen waar je op druk om de hoeden te veranderen (ze zijn const omdat de knop zelf niet veranderd)*/
 
 const bloemenkrans= document.querySelector("#bloemhoed");
 const heksenhoed= document.querySelector(".heksenhoed");
@@ -32,11 +32,13 @@ bron: https://www.youtube.com/watch?v=cDxzpUCvBGI
 onderzoek bron: https://stackoverflow.com/questions/9419263/how-to-play-audio*/
 
 const audio = document.getElementById('myAudio');
+const lijstkleding = ['plaatjes/outfit1.png','plaatjes/outfit2.png', 'plaatjes/outfit3.png', 'plaatjes/outfit4.png']
 
 
 
 
-/*hoofdeksels: plaatje van de hoed die later wordt veranderd naar een andere hoed*/
+
+/*hoofdeksels: plaatje van de hoed die later wordt veranderd naar een andere hoed ( zijn let om dat het plaatje gaat veranderen) en true fals ekan worden*/
 let hoedVeranderen = document.querySelector("#leeghoed");
 let hoedstatus = true;
 
@@ -55,7 +57,6 @@ let kettingstatus = true
 /*dobbelsteen: plaatje die je met behulp van de dobbelsteen random veranderd - en array van de lijst met welke kleding de kat willekeurig in kan verandren*/
 let dobbelsteenVeranderen = document.querySelector("#dobbelsteenkat")
 let randomstate = true
-let lijstkleding = ['plaatjes/outfit1.png','plaatjes/outfit2.png', 'plaatjes/outfit3.png', 'plaatjes/outfit4.png']
 let willekeurigeIndex;
 
 
@@ -240,8 +241,9 @@ function dancebreak() {
     audio.play();
 
 }
+/*geeft aan na hoeveel tijd de functie dancebreak wordt toegepast*/
 
-setTimeout(dancebreak, 60000); 
+setTimeout(dancebreak, 20000); 
 
 
 
