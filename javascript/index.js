@@ -1,10 +1,10 @@
 
-/*hoofdeksels: de knoppen waar je op druk om de hoeden te veranderen (ze zijn const omdat de knop zelf niet veranderd)*/
+/*hoofdeksels: de knoppen waar je op druk om de hoeden te veranderen*/
 
 const bloemenkrans= document.querySelector("#bloemhoed");
 const heksenhoed= document.querySelector(".heksenhoed");
 const baretthoed= document.querySelector("#barrethoed");
-const fancyhoed= document.querySelector("#fancyhoed")
+const fancyhoed= document.querySelector("#fancyhoed");
 
 /*brillen: de knoppen waar je op druk om te brillen te veranderen*/
 const sterrenbril = document.querySelector("#sterretjesbril");
@@ -14,9 +14,9 @@ const rozebril = document.querySelector("#fancyrozebril");
 
 /*clothes: de knoppen waar je op druk om te kleding te veranderene*/
 const rozejurk = document.querySelector("#jurkroze");
-const regenjassen = document.querySelector("#regenjass")
-const fancypak = document.querySelector("#nettepak")
-const blauweoutfit = document.querySelector("#blauwejurken")
+const regenjassen = document.querySelector("#regenjass");
+const fancypak = document.querySelector("#nettepak");
+const blauweoutfit = document.querySelector("#blauwejurken");
 
 /*kettingen: de knoppen waar je op druk om de accessoires te veranderen*/
 const sterhanger = document.querySelector("#sterhangers");
@@ -32,7 +32,9 @@ bron: https://www.youtube.com/watch?v=cDxzpUCvBGI
 onderzoek bron: https://stackoverflow.com/questions/9419263/how-to-play-audio*/
 
 const audio = document.getElementById('myAudio');
-const lijstkleding = ['plaatjes/outfit1.png','plaatjes/outfit2.png', 'plaatjes/outfit3.png', 'plaatjes/outfit4.png']
+
+/* array van de lijst met welke kleding de kat willekeurig in kan verandren*/
+const lijstkleding = ['plaatjes/outfit1.png','plaatjes/outfit2.png', 'plaatjes/outfit3.png', 'plaatjes/outfit4.png'];
 
 
 
@@ -43,20 +45,20 @@ let hoedVeranderen = document.querySelector("#leeghoed");
 let hoedstatus = true;
 
 /*brillen: plaatje van de bril die later veranderd naar een andere bril*/
-let brilVeranderen = document.querySelector("#leegbril")
-let brilstatus = true
+let brilVeranderen = document.querySelector("#leegbril");
+let brilstatus = true;
 
 /*clothes: plaatje van kleding die later veranderd naar een andere plaatje van kleding*/
-let kledingVeranderen = document.querySelector("#leegkleding")
-let kledingstatus = true
+let kledingVeranderen = document.querySelector("#leegkleding");
+let kledingstatus = true;
 
 /*kettingen: plaatje van ketting die later veranderd naar een andere plaatje van een ketting*/
-let kettingVeranderen = document.querySelector("#leegketting")
-let kettingstatus = true
+let kettingVeranderen = document.querySelector("#leegketting");
+let kettingstatus = true;
 
 /*dobbelsteen: plaatje die je met behulp van de dobbelsteen random veranderd - en array van de lijst met welke kleding de kat willekeurig in kan verandren*/
-let dobbelsteenVeranderen = document.querySelector("#dobbelsteenkat")
-let randomstate = true
+let dobbelsteenVeranderen = document.querySelector("#dobbelsteenkat");
+let randomstate = true;
 let willekeurigeIndex;
 
 
